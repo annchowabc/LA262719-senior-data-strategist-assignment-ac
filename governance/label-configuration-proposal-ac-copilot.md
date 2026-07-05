@@ -7,16 +7,11 @@
 ## Label mapping
 
 Label‑Configuration Proposal for Go‑Live
-
 Legislative Assembly of British Columbia – Information Protection Program  
 
 Prepared for: Director, Information Technology Division
-
-Prepared by: Senior Data Strategist (Candidate)
-
+Prepared by: Senior Data Strategist (Annie Chow)
 Date: 5 July 2026
-
-
 
 1\. Mapping the Scan Content to Assembly Labels \& Descriptors
 
@@ -55,6 +50,29 @@ S‑022	Old Records (pre‑2015)	Internal	Proceedings
 S‑023	Media Releases Approved	Public	People
 S‑024	Incident Response Active	Restricted	Security
 
+
+4\. Go‑Live Configuration Summary
+
+Auto‑Labelling
+Public → communications, broadcasts, job postings
+Internal → training, general staff, non‑sensitive operations
+Confidential → HR, member services, legal, commercial, financial personal data
+Restricted → security, audit, incident response, payroll, draft budgets, closed proceedings
+Copilot Scoping
+Public → full access
+Internal → controlled access
+Confidential → limited access, no externalization
+Restricted → high‑level only, zero‑retention, strict authorization
+Deck Alignment
+Every rule is grounded in:
+BC Information Security Classification Standard
+Assembly’s four‑label model
+Descriptor taxonomy
+Sensitivity‑first classification
+Least‑privilege access control
+
+## Auto-labelling rules
+
 2\. Auto‑Labelling Rules for Go‑Live
 
 These rules follow the Information Protection deck’s guidance:
@@ -64,11 +82,9 @@ Descriptors reflect business function
 Labels reflect sensitivity and harm potential
 
 2.1 Public – Auto‑Labelling Rules
-
 Criteria: Approved for external release; disclosure poses no harm.
 Triggers:
 “media release”, “public job posting”, “Hansard”, “broadcast”, “public statement”, “approved for release”
-
 Auto‑Label:  
 Public + Descriptor: People or Proceedings
 Deck grounding: Public = information intended for external audiences.
@@ -96,6 +112,9 @@ Triggers:
 Auto‑Label:  
 Restricted + Descriptor: Security, Audit, Financial, or Proceedings
 Deck grounding: Restricted = information requiring strict controls due to security, audit, or financial sensitivity.
+
+
+## Copilot and agent scoping
 
 3\. Copilot Scoping Rules for Go‑Live
 Copilot access must follow the deck’s least‑privilege and sensitivity‑based principles.
@@ -136,30 +155,6 @@ Generate detailed summaries of security, audit, or financial restricted data
 Combine Restricted content with any other classification
 Store or reuse Restricted content
 Deck grounding: Restricted = highest sensitivity; strict controls required.
-
-4\. Go‑Live Configuration Summary
-
-Auto‑Labelling
-Public → communications, broadcasts, job postings
-Internal → training, general staff, non‑sensitive operations
-Confidential → HR, member services, legal, commercial, financial personal data
-Restricted → security, audit, incident response, payroll, draft budgets, closed proceedings
-Copilot Scoping
-Public → full access
-Internal → controlled access
-Confidential → limited access, no externalization
-Restricted → high‑level only, zero‑retention, strict authorization
-Deck Alignment
-Every rule is grounded in:
-BC Information Security Classification Standard
-Assembly’s four‑label model
-Descriptor taxonomy
-Sensitivity‑first classification
-Least‑privilege access control
-
-## Auto-labelling rules
-
-## Copilot and agent scoping
 
 ## Sample-document labels
 
